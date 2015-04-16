@@ -1,0 +1,15 @@
+To use this program correctly, you will need to ensure that you at least specify at least three things: A valid root SAN base folder (basically the directory which will contain all the staff and student folders), an email address and an accessible SMTP email server (for error messenging purposes). (Note: this base version has been configured for the UCT network to use OBE1.com.uct.ac.za and the sender email address has therefore been hardcoded to Unattended-mailbox@obe1.com.uct.ac.za)
+
+The folder generation operation depends on your scheduling. You can set up to two scheduled times which the program will work against by making use of the date/time picker controls on the main window. Alternatively, you can choose to use the interval scheduler that will allow you to set an interval (in minutes) from the base time (second time stamp on the right).
+
+The application automatically downloads a student and staff list to a temporary location, parses them and then creates all folders that don't already exist in the SAN root folder (%SAN_ROOT%\Students and %SAN_ROOT%\Staff). Once new folders have been created, the application then also removes folders that exist but don't appear on the downloaded lists.
+
+Removed folders are moved to a %SAN_ROOT%\Removed folder.
+
+Minimising the application will simply hide it, therefore allowing it to run in the background.
+
+On errors encountered, the application will attempt to send an email to the specified administrator with the error message.
+
+The about and help menu items brings up the about and help dialog screens respectively.
+
+-- Last Updated: 06/11/2007 --
